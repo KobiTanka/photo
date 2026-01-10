@@ -1,0 +1,349 @@
+/* This element removes spacing from all elements so we start fresh */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Settings for the entire page body */
+body {
+    font-family: 'Open Sans', sans-serif; /* Main font */
+    background-color: black;              /* Dark background */
+    color: whitesmoke;                    /* Light text color */
+    line-height: 1.6;                     /* Spacing between lines */
+
+    /* Background image with a dark overlay */
+    /* 0.85 means 85% dark) */
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('images/background-site.jpg');
+    background-size: cover;       /* Stretches the image */
+    background-attachment: fixed; /* Image stays still when scrolling */
+    background-position: center;  /* Centers the image */
+}
+
+/* Removes underlines from all links */
+a {
+    text-decoration: none;
+    color: inherit; /* Inherits the color of the text from the element it is located in (whitesmoke)*/
+}
+
+/* HEADINGS */
+h1, h2 {
+    font-family: 'Poppins', sans-serif; /* Special font for headings */
+    color: darkorange;                  /* MAIN orange color */
+}
+h3 {
+    font-family: 'Poppins', sans-serif; /* Special font for headings */
+    color: white;
+}
+
+/* MAIN CONTENT BOX */
+main {
+    max-width: 1150px;         /* Site width */
+    margin: 40px auto;         /* Center in the middle */
+    padding: 40px;             /* Inner spacing */
+    background-color: black;   /* Background for the container */
+    border: 1px solid gray;    /* Thin gray border to separate it from background */
+    border-radius: 10px;       /* Rounded corners */
+    min-height: 60vh;
+}
+
+/* TOP MENU (HEADER) */
+header {
+    background-color: black;   /* Black background */
+    position: sticky;          /* Sticks menu to the top */
+    top: 0;
+    z-index: 1000;             /* Stays on top of everything */
+    border-bottom: 3px solid darkorange; /* Orange line at the bottom */
+}
+
+/* MAIN BOX: Logo (left) Menu (right) */
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separates the logo and menu at both ends */
+}
+
+/* LEFT AREA: Image + Text block (side by side) */
+.logo-link {
+    display: flex;        
+    align-items: center;  /* Centers them vertically */
+    text-decoration: none;
+    gap: 15px;            /* Distance between the image and the text */
+}
+
+.logo {
+    height: 60px;
+    filter: invert(1);   /* Color invert */
+}
+
+/* TEXT BLOCK */
+.brand-info {
+    display: flex;
+    flex-direction: column; /*One below the other */
+    justify-content: center;
+}
+
+/* Fotosvqt text */
+.brand-info h1 {
+    margin: 0;            /* Remove spacing */
+    line-height: 1;       /* Compact line */
+    font-size: 28px;      /* Heading size */
+    color: darkorange;
+}
+
+.brand-info .slogan {
+    margin: 0;
+    font-size: 17px;      /* Slogan text */
+    color: silver;
+    letter-spacing: 1px;  /* Slightly space out the letters for style */
+}
+
+/* List of links in the menu */
+.main-menu {
+    display: flex;
+    gap: 15px;      /* Space between buttons */
+    list-style: none; /* Removes the dots from the list items */
+    margin: 0;
+}
+
+/* The buttons in the menu */
+.main-menu a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s; /* Smooth effect */
+}
+
+/* When you hover over a menu button */
+.main-menu a:hover {
+    background-color: darkorange;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* IMAGES AND SECTIONS */
+
+/* Home image */
+.hero-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Title over the home page */
+.hero-text h1 {
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* History Section */
+.history-timeline {
+    border-left: 3px solid darkorange; /* Orange line on the left */
+    padding-left: 20px;
+}
+
+.history-event {
+    background: dimgray; /* Dark gray background for events */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Technique Section (Cards) */
+.gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatic columns */
+    gap: 20px;
+}
+
+.gear-card {
+    background-color: dimgray; /* Dark gray background */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid darkorange; /* Orange edge */
+    transition: 0.3s;
+}
+
+.gear-card:hover {
+    transform: translateY(-5px); /* Jumps up */
+    background-color: gray;      /* Lighter gray on hover */
+}
+
+/* Divider line */
+.divider {
+    border: 0;      /* Deletes the default 3D shadow */
+    height: 1px;    /* Sets the thickness of our new line */
+    background: gray; /* Sets the color of the new line */
+    margin: 40px 0px 40px 0px;
+}
+
+/* ACCORDION */
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 8px;      /* Rounds the corners of the main box */
+    overflow: hidden; /* Keeps the inner content from spilling out of the rounded corners */
+}
+
+.accordion-header {
+    background-color: dimgray;
+    padding: 20px;
+    cursor: pointer; 
+    /*  Aligns the question text and the arrow/plus icon */
+    display: flex;
+    justify-content: space-between; /* Pushes text left, icon right */
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: gray; /* Lightens up when you hover */
+}
+
+/* When accordion is open */
+.accordion-header.active {
+    background-color: darkorange; /* Orange background */
+    color: white;
+}
+
+/* Hidden content */
+.accordion-content {
+    padding: 20px;
+    background-color: black;
+    display: none; /* Keeps the drawer closed by default */
+}
+
+.accordion-content img {
+    max-width: 60%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* CONTACT FORM */
+form {
+    background-color: dimgray;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, textarea { /* Due to the textarea the browser spreads out message */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: black;
+    border: 1px solid gray;
+    color: white;
+    border-radius: 5px;
+}
+
+/* When typing in the field */
+input:focus, textarea:focus {
+    outline: none;            /* Remove the ugly default blue glow from the browser */
+    border-color: darkorange; /* custom orange border instead */
+}
+
+/* Submit Button */
+button {
+    background: darkorange; /* Orange background */
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: orangered;
+    transform: scale(1.05); /* Zooms in */
+}
+
+/* MAP AND INFO */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid gray;
+}
+
+.map-box {
+    flex: 0 0 350px;
+    height: 300px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.contact-info a:hover {
+    color: darkorange;
+    text-decoration: underline;
+}
+
+/* FOOTER (BOTTOM) */
+footer {
+    background-color: black;
+    color: gray;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid gray;
+}
+
+footer a {
+    color: silver; /* Light gray */
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: darkorange; /* Orange on hover */
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .main-menu {
+        display: none; /* Hide normal menu */
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Added by JavaScript when clicked */
+    .main-menu.active {
+        display: flex;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Elements go one below another */
+    }
+
+    .map-box {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

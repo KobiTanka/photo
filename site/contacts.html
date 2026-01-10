@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Лого" class="logo">
+                <div class="brand-info">
+                    <h1>ФотоСвят</h1>
+                    <p class="slogan">Улови мига, запази емоцията</p>
+                </div>
+            </a>
+            
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="tehnika.html">Техника</a></li>
+                    <li><a href="composition.html">Композиция</a></li>
+                    <li><a href="lighting.html">Светлина</a></li>
+                    <li><a href="contacts.html" class="active">Контакти</a></li>
+                </ul>
+                <div class="menu-toggle">☰</div>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <h2>Свържете се с нас</h2>
+        <p>Имате въпроси за фотографията или искате да споделите мнение? Пишете ни!</p>
+
+        <form id="contactForm">
+            <label for="name">Име:</label>
+            <input type="text" id="name" placeholder="Вашето име...">
+
+            <label for="email">Имейл:</label>
+            <input type="text" id="email" placeholder="Вашият имейл...">
+
+            <label for="message">Съобщение:</label>
+            <textarea id="message" rows="5" placeholder="Напишете вашето съобщение тук..."></textarea>
+
+            <button type="submit">Изпрати</button>
+        </form>
+
+        <div class="contact-container">
+    
+    <div class="contact-info">
+        <h3>Намерете ни</h3>
+        
+        <p>📍 Адрес: Mall Varna, g.k. TroshevoMladost, бул. „Владислав Варненчик“ 186, Етаж 1, 9009 Varna</p>
+        
+        <p>
+            📧 Email: 
+            <a href="mailto:info@fotosvyat.bg" class="contact-link">info@fotosvyat.bg</a>
+        </p>
+        
+        <p>
+            📞 Телефон: 
+            <a href="tel:+359888123456" class="contact-link">+359 888 123 456</a>
+        </p>
+    </div>
+
+    <div class="map-box">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5814.952911233274!2d27.886757410967892!3d43.22046924450876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a455e6bb933a51%3A0x66b604c93d19ea4e!2zTWFkZVZpc2lvblN0dWRpbyAtINCh0YLRg9C00LjQviDQt9CwINGB0LXQvNC10LnQvdCwINGE0L7RgtC-0LPRgNCw0YTQuNGPINCS0LDRgNC90LA!5e0!3m2!1sen!2sbg!4v1766932464333!5m2!1sen!2sbg" 
+        width="100%"
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+<!--
+src: This is the address of the map. Here you put the link that Google Maps gives you.
+
+width="100%" and height="100%": Tells the map to stretch and take up the entire space in the box where you put it.
+
+style="border:0;": Removes the ugly frame around the map to make it look cleaner.
+
+allowfullscreen: Allows the user to press a button and open the map in full screen.
+
+loading="lazy": (Very important!) This is "lazy loading." It means that the map will not load until the user scrolls to it. This makes your site much faster.
+
+referrerpolicy: A security setting that tells Google what information to send when someone loads the map.
+-->
+</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Фотография: Техника и Изкуство.</p>
+        <a href="contacts.html">Връзка с нас</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

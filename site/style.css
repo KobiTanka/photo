@@ -7,7 +7,7 @@
 
 /* Settings for the entire page body */
 body {
-    font-family: 'Open Sans', sans-serif; /* Main font */
+    font-family: Arial, sans-serif; /* Main font */
     background-color: black;              /* Dark background */
     color: whitesmoke;                    /* Light text color */
     line-height: 1.6;                     /* Spacing between lines */
@@ -28,11 +28,11 @@ a {
 
 /* HEADINGS */
 h1, h2 {
-    font-family: 'Poppins', sans-serif; /* Special font for headings */
+    font-family: Verdana, sans-serif; /* Special font for headings */
     color: darkorange;                  /* MAIN orange color */
 }
 h3 {
-    font-family: 'Poppins', sans-serif; /* Special font for headings */
+    font-family: Verdana, sans-serif; /* Special font for headings */
     color: white;
 }
 
@@ -248,6 +248,7 @@ input, textarea { /* Due to the textarea the browser spreads out message */
     border: 1px solid gray;
     color: white;
     border-radius: 5px;
+    font-family: inherit; /* Inherits the font family from body tag */
 }
 
 /* When typing in the field */
@@ -316,7 +317,12 @@ footer a:hover {
 }
 
 /* MOBILE VERSION */
+/* @media checks the device (screen/printer) and size before applying styles */
 @media (max-width: 768px) {
+    .accordion-content img {
+        max-width: 100%;
+    }
+
     .menu-toggle {
         display: block; /* Show hamburger icon */
     }
